@@ -21,10 +21,10 @@ const ImageCarousel = ({ images }) => {
     return (
         <>
             {/* <div className="navigation-wrapper h-full w-auto rounded-lg z-[-1000]"> */}
-            <div className="navigation-wrapper h-full w-auto rounded-lg ">
+            <div className="navigation-wrapper h-full w-full rounded-lg ">
                 <div ref={sliderRef} className="keen-slider w-full h-full">
                     {images.map((image) =>
-                        <div className="keen-slider__slide h-full w-fit">
+                        <div className="keen-slider__slide h-full w-full">
                             <img src={image} alt="image"
                                 className="object-cover object-center h-full w-full rounded-lg z-[-1000]"
                             />

@@ -4,22 +4,7 @@ import React, { useRef, useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import ImageCarousel from './imagescarousel';
-// import * from '../../json/zp_api_listing_data.json';
 
-// const responsive = {
-//   0: { items: 0.9 },
-//   380: { items: 1.01 },
-//   424: { items: 1.07 },
-//   480: { items: 1.13 },
-//   618: { items: 1.2 },
-//   650: { items: 1.3 },
-//   728: { items: 1.4 },
-//   785: { items: 1.56 },
-//   860: { items: 1.7 },
-//   915: { items: 1.9 },
-//   1030: { items: 2.2 },
-//   1120: { items: 2.7 },
-// };
 
 const responsive = {
   0: { items: 1 },
@@ -55,7 +40,7 @@ const ACarousel = ({ data }) => {
       // console.log("acar", item.details.images.split(","))
       return (
         <div
-          className="min-w-[350px] h-[600px] rounded-md max-w-[404px] sm:h-[600px] flex flex-col justify-between"
+          className="min-w-[350px] h-[600px] rounded-md max-w-[404px] sm:w-[404px] sm:h-[600px] flex flex-col justify-between"
           key={item.id}
 
           /////
