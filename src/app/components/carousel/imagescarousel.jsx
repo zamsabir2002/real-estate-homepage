@@ -22,11 +22,11 @@ const ImageCarousel = ({ images }) => {
         <>
             {/* <div className="navigation-wrapper h-full w-auto rounded-lg z-[-1000]"> */}
             <div className="navigation-wrapper h-full w-auto rounded-lg ">
-                <div ref={sliderRef} className="keen-slider w-fit h-full">
+                <div ref={sliderRef} className="keen-slider w-full h-full">
                     {images.map((image) =>
                         <div className="keen-slider__slide h-full w-fit">
                             <img src={image} alt="image"
-                                className="object-cover object-center h-full w-auto rounded-lg z-[-1000]"
+                                className="object-cover object-center h-full w-full rounded-lg z-[-1000]"
                             />
                         </div>
                     )}
@@ -54,7 +54,7 @@ const ImageCarousel = ({ images }) => {
                 )}
 
                 {loaded && instanceRef.current && (
-                    <div className="dots z-[1000] ">
+                    <div className="dots z-[1000] max">
                         {[
                             ...Array(instanceRef.current.track.details.slides.length).keys(),
                         ].map((idx) => {

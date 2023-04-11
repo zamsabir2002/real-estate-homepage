@@ -6,20 +6,28 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import ImageCarousel from './imagescarousel';
 // import * from '../../json/zp_api_listing_data.json';
 
+// const responsive = {
+//   0: { items: 0.9 },
+//   380: { items: 1.01 },
+//   424: { items: 1.07 },
+//   480: { items: 1.13 },
+//   618: { items: 1.2 },
+//   650: { items: 1.3 },
+//   728: { items: 1.4 },
+//   785: { items: 1.56 },
+//   860: { items: 1.7 },
+//   915: { items: 1.9 },
+//   1030: { items: 2.2 },
+//   1120: { items: 2.7 },
+// };
+
 const responsive = {
-  0: { items: 0.9 },
-  380: { items: 1.01 },
-  424: { items: 1.07 },
-  480: { items: 1.13 },
-  618: { items: 1.2 },
-  650: { items: 1.3 },
-  728: { items: 1.4 },
-  785: { items: 1.56 },
-  860: { items: 1.7 },
-  915: { items: 1.9 },
-  1030: { items: 2.2 },
-  1120: { items: 2.7 },
-};
+  0: { items: 1 },
+  874: { items: 2 },
+  1024: { items: 2.2 },
+  1100: { items: 2.4 },
+  1120: { items: 3 },
+}
 
 // const Buttons = () => {
 //   const slidePrev = ACarousel.
@@ -47,7 +55,7 @@ const ACarousel = ({ data }) => {
       // console.log("acar", item.details.images.split(","))
       return (
         <div
-          className="w-[75vw] min-w-[350px] h-[600px] rounded-md max-w-[454px] sm:h-[600px] flex flex-col justify-between"
+          className="min-w-[350px] h-[600px] rounded-md max-w-[404px] sm:h-[600px] flex flex-col justify-between"
           key={item.id}
 
           /////
@@ -124,33 +132,54 @@ const ACarousel = ({ data }) => {
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
   return (
-    <>
-      <AliceCarousel
-        // infinite
-        mouseTracking
-        disableButtonsControls
-        disableDotsControls
-        // autoWidth
-        items={items}
-        activeIndex={activeIndex}
-        responsive={responsive}
-        onSlideChanged={syncActiveIndex}
+    <div className='mt-7'>
+      {/* <div className='flex w-full justify-center pl-[5px] mx-auto items-center min-[448px]:pl-[3%] min-[470px]:pl-[5%] min-[510px]:pl-[9%] min-[560px]:pl-[13%] sm:pl-[22%] md:pl-[25%]'> */}
+      <div className='flex gap-2 w-full justify-center pl-[5px] mx-auto items-center min-[448px]:pl-[3%] min-[470px]:pl-[5%] min-[510px]:pl-[9%] min-[560px]:pl-[13%] sm:pl-[22%] md:pl-[25%] min-[874px]:pl-[1%] min-[874px]:pr-[1%] min-[960px]:pl-[3%] lg:pl-1 lg:pr-0 min-[1125px]:pl-[2%]'>
+        <AliceCarousel
+          // infinite
+          mouseTracking
+          disableButtonsControls
+          disableDotsControls
+          // autoWidth
+          items={items}
+          activeIndex={activeIndex}
+          responsive={responsive}
+          onSlideChanged={syncActiveIndex}
         // controlsStrategy="alternate"
-        paddingLeft={10}
-        paddingRight={10}
-      // ref={carousel}
-      />
-      <div className="absolute top-1.5 right-4 flex gap-6 ">
-        <button
-          onClick={slidePrev}
-          className='text-5xl z-[500]'
-        >&lt;</button>
-        <button
-          onClick={slideNext}
-          className='text-5xl z-[500]'
-        >&gt;</button>
+        // ref={carousel}
+        />
       </div>
-    </>
+      <div className="absolute top-1.5 right-4 flex gap-8 mt-2 ">
+
+        <div
+          role='button'
+          onClick={slidePrev}
+          className='z-[500]'
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.621" height="44.243" viewBox="0 0 23.621 44.243">
+            <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(96.305 418.272) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+          </svg>
+        </div>
+
+        <div
+          role='button'
+          onClick={slideNext}
+          className='z-[500]'
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.621" height="44.243" viewBox="0 0 23.621 44.243">
+            <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(-72.684 -374.03)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+          </svg>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
   );
 }
 
