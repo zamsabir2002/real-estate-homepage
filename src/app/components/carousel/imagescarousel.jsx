@@ -27,7 +27,6 @@ const ImageCarousel = ({ item, images }) => {
     const getTime = (expire) => {
         const countDownDate = new Date(expire).getTime();
         const currTime = new Date().getTime();
-        console.log(expire, countDownDate, currTime)
         return (
             <CountdownTimer
                 targetDate={countDownDate}
@@ -35,7 +34,7 @@ const ImageCarousel = ({ item, images }) => {
     }
 
     return (
-        <div className='max-[640px]:min-w-[344px] card h-[440px] rounded-2xl w-full max-w-[900px] p-4 mb-1 flex flex-col justify-between text-white box_shadow' style={{ backgroundImage: `url(${images[currenIndex]})` }}>
+        <div className='max-[640px]:min-w-[310px] card h-[440px] rounded-2xl w-full max-w-[900px] p-4 mb-1 flex flex-col justify-between text-white box_shadow' style={{ backgroundImage: `url(${images[currenIndex]})` }}>
 
             <div
                 className='z-[10] text-2xl text-center mt-1 text-white'
@@ -81,7 +80,6 @@ const ImageCarousel = ({ item, images }) => {
 
                         <div className=''>
                             £5,000,000 GBP
-                            {console.log(bg)}
                             <div className="text-xs font-light w-[36px] h-[36px] z-[1000] absolute bottom-[10%] right-[17%] text-center min-[490px]:right-[22%] md:right-[20%] lg:right-[17%] lg:bottom-[11.5%] xl:right-[15%] min-[1600px]:right-[18%]"
                                 style={{
                                     backgroundImage: `url(${bg.src})`
