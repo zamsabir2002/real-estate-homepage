@@ -2,9 +2,8 @@
 import { Inter } from 'next/font/google'
 import ACarousel from './components/carousel/acarousel'
 import items from './data.json'
-import Header from './components/header'
-import "keen-slider/keen-slider.min.css"
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -16,8 +15,7 @@ export default function Home() {
   // console.log("posts", props)
   // console.log("items", items)
   return (
-    <div className='w-full p-2'>
-      <Header />
+    <div className='w-full p-3'>
       <ACarousel data={items} />
     </div>
   )
