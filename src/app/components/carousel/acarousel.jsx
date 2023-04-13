@@ -193,7 +193,7 @@ const ACarousel = ({ data }) => {
               className='z-[500]'
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="23.621" height="44.243" viewBox="0 0 23.621 44.243">
-                <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(96.305 418.272) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(96.305 418.272) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" strokeLinejoin="round" strokeWidth="3" />
               </svg>
             </button>
             <button
@@ -202,7 +202,7 @@ const ACarousel = ({ data }) => {
               className='z-[3000]'
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="23.621" height="44.243" viewBox="0 0 23.621 44.243">
-                <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(-72.684 -374.03)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                <path id="Path_59" data-name="Path 59" d="M74.805,416.151l20-20-20-20" transform="translate(-72.684 -374.03)" fill="none" stroke="#000" stroke-linecap="round" strokeLinejoin="round" strokeWidth="3" />
               </svg>
             </button>
           </div>
@@ -221,10 +221,15 @@ const ACarousel = ({ data }) => {
                     images={item.details.images.split(",")}
                   />
                   <div
-                    className='h-[59px] bg-black rounded-full relative flex flex-row text-white items-center justify-around w-full'
+                    className='h-[55px] bg-black rounded-2xl relative flex flex-row text-white justify-around w-full items-center'
                   >
                     <div className=''>£25.00 GBP</div>
-                    <div className='text-lg font-medium	'>Buy Entry Now</div>
+                    <div className='text-lg font-medium text-center tracking-wider'>
+                      Buy Entry Now
+                    </div>
+                    <div className='absolute z-[50] bottom-0.5 right-[18px] text-[10px] text-center'>
+                      #ZM786123456
+                    </div>
                   </div>
                 </div>
               </div>

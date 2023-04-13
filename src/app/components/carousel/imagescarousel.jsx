@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react"
-import CountdownTimer from "../countdown";
+import CountdownTimer from "../countdown/countdown";
 
 import bg from '../../../../loadview.png';
 
